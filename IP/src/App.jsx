@@ -1,11 +1,12 @@
 import React from "react";
-import Counter from "./Component/Counter";
+
+import ToggleContent from "./Component/ToggleCounter";
 
 function App() {
   return (
     <div>
       <h1>Welcome to My Dynamic Content Project!</h1>
-      <Counter />
+      <ToggleContent />
     </div>
   );
 }
