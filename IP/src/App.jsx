@@ -1,18 +1,27 @@
-import React from "react";
-import UserProfile from "./Component/UserProfile";
+import React, { useState } from "react";
+import ActionButton from "./Component/ActionButton.js";
 
 function App() {
-  // Example dynamic data
-  const user1 = { name: "Alice", age: 25, email: "alice@example.com" };
-  const user2 = { name: "Bob", age: 30, email: "bob@example.com" };
-  const user3 = { name: "Charlie", age: 35, email: "charlie@example.com" };
+  // State to track if the button was clicked
+  const [isButtonClicked, setIsButtonClicked] = useState(false);
+
+  // Event handler function
+  const handleButtonClick = () => {
+    alert("Button was clicked!");
+    setIsButtonClicked(true); // Set state to true when button is clicked
+  };
+
+  // Check if button has been clicked and log a message
+  if (isButtonClicked) {
+    console.log("Button was clicked by Khaled Parvez");
+  } else {
+    console.log("Button has not been clicked by Khaled Parvez");
+  }
 
   return (
     <div>
-      <h1>Dynamic Data Display</h1>
-      <UserProfile name={user1.name} age={user1.age} email={user1.email} />
-      <UserProfile name={user2.name} age={user2.age} email={user2.email} />
-      <UserProfile name={user3.name} age={user3.age} email={user3.email} />
+      <h1>Event Handler Project</h1>
+      <ActionButton handleClick={handleButtonClick} />
     </div>
   );
 }
