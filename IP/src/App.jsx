@@ -1,12 +1,13 @@
 import React from "react";
-
-import NameList from "./Component/NameList";
+import Greeting from "./Component/Greeting";
 
 function App() {
   return (
     <div>
-      <h1>Welcome to My Dynamic Content Project!</h1>
-      <NameList />
+      <h1>Basic Props Example</h1>
+      <Greeting name="Alice" />
+      <Greeting name="Bob" />
+      <Greeting name="Charlie" />
     </div>
   );
 }
